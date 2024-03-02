@@ -51,9 +51,9 @@ const Faq = () => {
     },
   ];
   return (
-    <section className="p-4 pt-[5.6rem] mt-[10rem] pb-[13rem]">
+    <section className="p-[2.5rem] sm:p-4 pt-[5.6rem] mt-[4rem] sm:mt-[10rem] pb-[6rem] sm:pb-[13rem]">
       <div className="max-w-[113.2rem] mx-auto">
-        <h2 className="text-[4.8rem] text-center mb-[6.4rem]">
+        <h2 className="text-[3.8rem] sm:text-[4.8rem] text-center mb-[6.4rem]">
           Ask away. <br />
           <span className="text-primaryColor font-bold ">We have answers!</span>
         </h2>

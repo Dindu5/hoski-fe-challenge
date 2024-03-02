@@ -3,7 +3,7 @@ import mainLogo from "../../assets/main-logo-light.png";
 
 const Footer = () => {
   return (
-    <footer className="px-4 pt-[6.3rem] mt-[10rem] pb-[10rem] bg-secondary-dark">
+    <footer className="px-[2.5rem] sm:px-4 pt-[6.3rem] mt-[4rem] sm:mt-[10rem] pb-[10rem] bg-secondary-dark">
       <div className="max-w-[86.9rem] mx-auto">
         <img
           src={mainLogo}

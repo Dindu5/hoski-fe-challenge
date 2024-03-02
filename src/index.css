@@ -3,57 +3,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  background-color: #ffffff;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  --primary-color: "#00B87C";
-  --text-color: "#101727";
-  --secondary-color: "#1A1A1C";
-  --color-white: "#FFFFFF";
-  --primary-font: "Montserrat", sans-serif;
-}
-
-html {
-  /* adaptive font size */
-  font-size: calc(100vw / 1728 * 10);
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  width: 100%;
-  min-height: 100vh;
-  background-color: var(--color-white);
-  font-family: "Montserrat", sans-serif;
-  color: var(--text-color);
-  font-weight: 400;
-}
-
-/* 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
-
-@media screen and (max-width: 960px) {
+@layer base {
   html {
-    font-size: calc(100vw / 1700 * 10);
+    /* adaptive font size */
+    font-size: calc(100vw / 1728 * 10);
+    scroll-behavior: smooth;
   }
-}
-@media screen and (max-width: 650px) {
-  html {
-    font-size: calc(100vw / 600 * 10);
+
+  body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: "#FFFFFF";
+    font-family: "Montserrat", sans-serif;
+    color: "#101727";
+    font-weight: 400;
+  }
+
+  @media screen and (max-width: 960px) {
+    html {
+      font-size: calc(100vw / 1700 * 10);
+    }
+  }
+  @media screen and (max-width: 650px) {
+    html {
+      font-size: calc(100vw / 600 * 10);
+    }
   }
 }

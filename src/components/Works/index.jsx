@@ -26,9 +26,9 @@ const Works = () => {
     },
   ];
   return (
-    <section className="p-4 pt-[5.6rem] mt-[10rem] pb-[7rem]">
+    <section className="p-[2.5rem] sm:p-4 pt-[5.6rem] mt-[4rem] sm:mt-[10rem] pb-[7rem]">
       <div className="max-w-[133.2rem] mx-auto">
-        <h2 className="text-[4.8rem] mb-[8.1rem]">
+        <h2 className="text-[3.8rem] sm:text-[4.8rem] mb-[8.1rem]">
           How
           <span className="text-primaryColor font-bold "> it works</span>
         </h2>
@@ -56,7 +56,7 @@ const Works = () => {
                     <h6 className="mb-[2.4rem] text-[3.2rem] leading-[3.901rem] text-text-dark">
                       {step.title}
                     </h6>
-                    <p className="text-[1.8rem] text-black leading-[2.88rem]">
+                    <p className="text-[2rem] leading-[3.5rem] sm:text-[1.8rem] text-black sm:leading-[2.88rem]">
                       {step.description}
                     </p>
                   </div>

@@ -34,7 +34,7 @@ const FaqItem = ({ question, answers, isOpen }) => {
             return (
               <div key={i}>
                 <p
-                  className={`text-[1.8rem] leading-[2.88rem] ${
+                  className={`text-[2rem] sm:text-[1.8rem] leading-[3.5rem] sm:leading-[2.88rem] ${
                     i + 1 !== answers.length ? "mb-[2.5rem]" : ""
                   }`}
                 >

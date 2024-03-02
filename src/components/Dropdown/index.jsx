@@ -39,14 +39,16 @@ const Dropdown = ({
   });
 
   return (
-    <div className="relative w-auto">
+    <div className="relative w-auto z-10">
       <button
         onClick={handleOpen}
-        className={`flex items-center text-[1.8rem] justify-between font-bold font-inter py-[0.5rem] px-[1rem] rounded-[0.5rem] bg-${
-          color || "transparent"
-        } w-[${width || "auto"}] text-${textColor || "text-color"} ${
-          customStyle || ""
-        }`}
+        className={`flex items-center text-[1.8rem] justify-between font-bold font-inter py-[0.5rem] px-[1rem] rounded-[0.5rem]`}
+        style={{
+          background: color || "#ffffff",
+          width: width || "auto",
+          color: textColor || "#101727",
+          ...customStyle,
+        }}
         ref={dropdownTriggerRef}
       >
         <div className="flex items-center">
@@ -72,32 +74,33 @@ const Dropdown = ({
       </button>
       {open && (
         <div
-          className="p-[1.5rem] z-50 rounded-[0.8rem] shadow-2xl w-auto absolute top-0 translate-y-[4rem]"
+          className="p-[1.5rem] w-full z-50 bg-white rounded-[0.8rem] shadow-2xl w-auto absolute top-0 translate-y-[4rem]"
           ref={menuRef}
         >
-          <ul>
-            {items.map((item, i) => {
-              return (
-                <li
-                  key={i}
-                  className={`flex items-center py-[1.4rem] px-[0.8rem] pr-[1.2rem] hover:bg-lightGray rounded-[0.4rem] cursor-pointer text-[1.6rem] ${
-                    item.value === selectedItem ? "bg-lightGray" : ""
-                  } ${customOptionStyle || ""}`}
-                  onClick={() => handleSelectionChange(item)}
-                >
-                  {" "}
-                  {item.img && (
-                    <img
-                      src={item.img}
-                      alt={item.text}
-                      className="w-[2.8rem] h-auto mr-[1.2rem]"
-                    />
-                  )}{" "}
-                  <p>{item.text}</p>{" "}
-                </li>
-              );
-            })}
-          </ul>
+          {items.map((item, i) => {
+            return (
+              <div
+                key={i}
+                className={`flex items-center py-[1.4rem] px-[0.8rem] pr-[1.2rem] hover:bg-lightGray rounded-[0.4rem] z-10 cursor-pointer text-[1.6rem] ${
+                  item.value === selectedItem ? "bg-lightGray" : ""
+                }`}
+                style={{
+                  ...customOptionStyle,
+                }}
+                onClick={() => handleSelectionChange(item)}
+              >
+                {" "}
+                {item.img && (
+                  <img
+                    src={item.img}
+                    alt={item.text}
+                    className="w-[2.8rem] h-auto mr-[1.2rem]"
+                  />
+                )}{" "}
+                <p>{item.text}</p>{" "}
+              </div>
+            );
+          })}
         </div>
       )}
     </div>
