@@ -1,35 +1,10 @@
 import React, { useState } from "react";
+import { benefitsOutline } from "../../services/constants";
 import sectionImg from "../../assets/illustrations/what-you-get.svg";
 // Icons
-import firstIcon from "../../assets/icons/file-tick.svg";
-import firstIconActive from "../../assets/icons/file-tick-active.svg";
-import secondIcon from "../../assets/icons/todo-listing.svg";
-import secondIconActive from "../../assets/icons/todo-listing-active.svg";
-import thirdIcon from "../../assets/icons/circle-checkmark.svg";
-import thirdIconActive from "../../assets/icons/circle-checkmark-active.svg";
 
 const Benefits = () => {
   const [activeBenefit, setActiveBenefit] = useState("completion");
-  const benefitsOutline = [
-    {
-      text: "Completion of all required documents specific to your state.",
-      icon: firstIcon,
-      iconActive: firstIconActive,
-      alt: "completion",
-    },
-    {
-      text: "Easy to follow instructions on filing your documents.",
-      icon: secondIcon,
-      iconActive: secondIconActive,
-      alt: "documents",
-    },
-    {
-      text: "Our guarantee and lifetime customer support.",
-      icon: thirdIcon,
-      iconActive: thirdIconActive,
-      alt: "guarantee",
-    },
-  ];
 
   return (
     <section className="p-[2.5rem] sm:p-4 pt-[5.6rem] mt-[6rem] sm:mt-[17rem]">

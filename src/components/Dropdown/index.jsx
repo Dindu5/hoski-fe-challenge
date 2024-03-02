@@ -1,4 +1,4 @@
-import React, { useState, useRef, useMemo } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import DropdownIcon from "../../assets/icons/dropdown-arrow.svg";
 import PropTypes from "prop-types";
 
@@ -10,6 +10,7 @@ const Dropdown = ({
   customOptionStyle,
   customStyle,
   defaultValue,
+  closeOnOutsideClick = true, // For additional customization in case we want a dropdown to be closed by just its trigger and the dropdown options
   onChange,
 }) => {
   const [open, setOpen] = useState(false);
@@ -23,20 +24,29 @@ const Dropdown = ({
   };
 
   const handleSelectionChange = (item) => {
+    setOpen(false);
     setSelectedItem(item.value);
     onChange(item.value);
   };
 
   const selectedItemDetails = items.find((item) => item.value === selectedItem);
 
-  window.addEventListener("click", (e) => {
-    if (
-      e.target !== menuRef.current &&
-      e.target !== dropdownTriggerRef.current
-    ) {
-      setOpen(false);
+  useEffect(() => {
+    const handleClick = (event) => {
+      if (
+        event.target !== menuRef.current &&
+        event.target !== dropdownTriggerRef.current
+      ) {
+        setOpen(false);
+      }
+    };
+    if (closeOnOutsideClick) {
+      window.addEventListener("click", handleClick);
     }
-  });
+    return () => {
+      window.removeEventListener("click", handleClick);
+    };
+  }, []);
 
   return (
     <div className="relative w-auto z-10">
@@ -116,6 +126,7 @@ Dropdown.propTypes = {
   customStyle: PropTypes.string,
   customOptionStyle: PropTypes.string,
   defaultValue: PropTypes.string,
+  closeOnOutsideClick: PropTypes.bool,
 };
 
 export default Dropdown;

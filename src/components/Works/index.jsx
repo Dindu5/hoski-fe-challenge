@@ -1,30 +1,7 @@
 import React from "react";
-// Icons
-import workOne from "../../assets/illustrations/works-1.svg";
-import workTwo from "../../assets/illustrations/works-2.svg";
-import workThree from "../../assets/illustrations/works-3.svg";
+import { steps } from "../../services/constants";
 
 const Works = () => {
-  const steps = [
-    {
-      title: "Fill out our brief online questionnaire",
-      description:
-        "Filling out a name change questionnaire is a straightforward process that typically involves a few simple steps. These questionnaires are designed to gather essential information needed for the legal process of changing your name.",
-      img: workOne,
-    },
-    {
-      title: "We create the documents for your name change",
-      description:
-        "Within our efficient system, our document scriveners take on the crucial task of carefully examining your responses. Their role is to review the information you provide, meticulously checking for any potential gaps or missing details.",
-      img: workTwo,
-    },
-    {
-      title: "Receive a summary of your name change request",
-      description:
-        "Receive a comprehensive summary as the final step in processing your name change order. Providing clarity and assurance, this summary ensures that you have a clear understanding of the information submitted and the subsequent steps in the process.",
-      img: workThree,
-    },
-  ];
   return (
     <section className="p-[2.5rem] sm:p-4 pt-[5.6rem] mt-[4rem] sm:mt-[10rem] pb-[7rem]">
       <div className="max-w-[133.2rem] mx-auto">

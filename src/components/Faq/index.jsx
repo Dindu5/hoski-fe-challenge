@@ -1,55 +1,8 @@
 import React from "react";
-// Icons
-
-import minus from "../../assets/icons/minus.svg";
-import plus from "../../assets/icons/plus.svg";
 import FaqItem from "../FaqItem";
-
-const faqItem = ({}) => {};
+import { faqArray } from "../../services/constants";
 
 const Faq = () => {
-  const faqArray = [
-    {
-      question: "Will my name change instantly after using this service?",
-      answers: [
-        "No! The processing time for a name change request varies depending on the specific company and occasionally the season; for example, passport updates might take longer in the summer months. It's important to note that you can initiate the change request only after obtaining your marriage certificate, decree absolute, or deed poll.",
-        "To facilitate the process and allow for multiple name change requests to be submitted simultaneously, it is advisable to have 3-4 authentic copies of your legal document on hand",
-      ],
-      isOpen: true,
-    },
-    {
-      question: "Can I change my name and address at the same time?",
-      answers: [
-        "No! The processing time for a name change request varies depending on the specific company and occasionally the season; for example, passport updates might take longer in the summer months. It's important to note that you can initiate the change request only after obtaining your marriage certificate, decree absolute, or deed poll.",
-        "To facilitate the process and allow for multiple name change requests to be submitted simultaneously, it is advisable to have 3-4 authentic copies of your legal document on hand",
-      ],
-      isOpen: false,
-    },
-    {
-      question: "What are the legal requirements for a name change?",
-      answers: [
-        "No! The processing time for a name change request varies depending on the specific company and occasionally the season; for example, passport updates might take longer in the summer months. It's important to note that you can initiate the change request only after obtaining your marriage certificate, decree absolute, or deed poll.",
-        "To facilitate the process and allow for multiple name change requests to be submitted simultaneously, it is advisable to have 3-4 authentic copies of your legal document on hand",
-      ],
-      isOpen: false,
-    },
-    {
-      question: "Can same sex couples use this service?",
-      answers: [
-        "No! The processing time for a name change request varies depending on the specific company and occasionally the season; for example, passport updates might take longer in the summer months. It's important to note that you can initiate the change request only after obtaining your marriage certificate, decree absolute, or deed poll.",
-        "To facilitate the process and allow for multiple name change requests to be submitted simultaneously, it is advisable to have 3-4 authentic copies of your legal document on hand",
-      ],
-      isOpen: false,
-    },
-    {
-      question: "How long will you store my personal details on your system?",
-      answers: [
-        "No! The processing time for a name change request varies depending on the specific company and occasionally the season; for example, passport updates might take longer in the summer months. It's important to note that you can initiate the change request only after obtaining your marriage certificate, decree absolute, or deed poll.",
-        "To facilitate the process and allow for multiple name change requests to be submitted simultaneously, it is advisable to have 3-4 authentic copies of your legal document on hand",
-      ],
-      isOpen: false,
-    },
-  ];
   return (
     <section className="p-[2.5rem] sm:p-4 pt-[5.6rem] mt-[4rem] sm:mt-[10rem] pb-[6rem] sm:pb-[13rem]">
       <div className="max-w-[113.2rem] mx-auto">

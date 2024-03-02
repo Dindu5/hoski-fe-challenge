@@ -3,56 +3,17 @@ import heroImgOne from "../../assets/illustrations/hero-img-1.svg";
 import heroImgTwo from "../../assets/illustrations/hero-img-2.svg";
 import trustPilotLogo from "../../assets/trustpilot-logo.svg";
 import ratingImg from "../../assets/rating.svg";
-import alarmIcon from "../../assets/icons/alarm-clock.svg";
-import fileIcon from "../../assets/icons/file-completed.svg";
+
 import Dropdown from "../Dropdown";
-import usFlag from "../../assets/flags/us-flag.svg";
-import franceFlag from "../../assets/flags/france-flag.svg";
-import portugalFlag from "../../assets/flags/portugal-flag.svg";
-import germanyFlag from "../../assets/flags/germany-flag.svg";
+import { dropdownOptions, attributes } from "../../services/constants";
 
 function Hero() {
-  const dropdownOptions = [
-    {
-      img: usFlag,
-      text: "English",
-      value: "english",
-    },
-    {
-      img: franceFlag,
-      text: "Françias",
-      value: "french",
-    },
-    {
-      img: portugalFlag,
-      text: "Português",
-      value: "portuguese",
-    },
-    {
-      img: germanyFlag,
-      text: "Deutsch",
-      value: "german",
-    },
-  ];
   const [selectedLanguageOption, setSelectedLanguageOption] =
     useState("english");
 
   const handleDropdownChange = (selectedItem) => {
     setSelectedLanguageOption(selectedItem);
   };
-
-  const attributes = [
-    {
-      value: "99%",
-      subText: "on time delivery",
-      icon: alarmIcon,
-    },
-    {
-      value: "5+",
-      subText: "years of experience",
-      icon: fileIcon,
-    },
-  ];
 
   return (
     <header className="bg-buttonBlue p-[2.5rem] sm:px-4 pt-[3rem] pt-[5.6rem]">
