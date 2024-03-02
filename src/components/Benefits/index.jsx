@@ -59,6 +59,8 @@ const Benefits = () => {
           </div>
           <img
             src={sectionImg}
+            data-aos="fade-up"
+            data-aos-duration="800"
             alt="With us"
             className="max-w-[46.5rem] w-full h-[48.239rem] mx-auto mt-[6rem] sm:mx-0 sm:mt-0"
           />

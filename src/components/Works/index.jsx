@@ -18,7 +18,8 @@ const Works = () => {
               >
                 <img
                   src={step.img}
-                  alt=""
+                  alt="Illustration"
+                  data-aos="fade-up"
                   className="sm:absolute w-[32.7rem] h-[23.281rem] object-contain mb-[7rem] sm:mb-0"
                 />
                 <div className="flex items-center ml-auto">

@@ -5,7 +5,7 @@
 
 @layer base {
   html {
-    /* adaptive font size */
+    /* decided to use an adaptive sizing */
     font-size: calc(100vw / 1728 * 10);
     scroll-behavior: smooth;
   }

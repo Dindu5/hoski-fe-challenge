@@ -16,7 +16,7 @@ function Hero() {
   };
 
   return (
-    <header className="bg-buttonBlue p-[2.5rem] sm:px-4 pt-[3rem] pt-[5.6rem]">
+    <header className="bg-buttonBlue p-[2.5rem] sm:px-4 pt-[3rem] pt-[3.6rem]">
       <div className="max-w-[133.2rem] mx-auto">
         <nav className="flex justify-end">
           <Dropdown
@@ -44,6 +44,7 @@ function Hero() {
         <div className="flex items-center flex-col sm:flex-row justify-center w-full relative">
           <img
             src={heroImgOne}
+            data-aos="zoom-in-up"
             alt="Name Change Illustration One"
             className="absolute hidden sm:block left-0 w-[40.763rem] h-[36.623rem] object-contain"
           />
@@ -61,6 +62,7 @@ function Hero() {
           </div>
           <img
             src={heroImgTwo}
+            data-aos="zoom-in-up"
             alt="Name Change Illustration Two"
             className="absolute hidden sm:block right-0 w-[34.686rem] h-[37.2rem] object-contain"
           />
